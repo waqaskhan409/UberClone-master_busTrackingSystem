@@ -6,6 +6,8 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
 
+import com.google.firebase.FirebaseApp;
+
 import java.nio.channels.Channel;
 
 public class AppNotification extends Application {
@@ -13,6 +15,7 @@ public class AppNotification extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        FirebaseApp.initializeApp(this);
         notifyNotication();
     }
 

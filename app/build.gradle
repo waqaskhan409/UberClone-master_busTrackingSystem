@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.simcoder.uber"
         minSdkVersion 16
@@ -21,8 +21,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
@@ -41,13 +41,13 @@ dependencies {
     implementation 'com.google.android.libraries.places:places:1.0.0'
 
     implementation 'com.google.maps:google-maps-services:0.9.1'
-
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
     implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 }
-
+apply plugin: 'com.google.gms.google-services'
 
 
 
